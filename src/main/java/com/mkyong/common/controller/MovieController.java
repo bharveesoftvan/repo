@@ -15,9 +15,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/movie")
 public class MovieController {
 
-	@RequestMapping(value = "/{name}", method = RequestMethod.POST)
+	@RequestMapping(value = "/{name}", method = RequestMethod.POST, headers = "Accept=application/json")
 	public Map<String, Object> getMovie(@RequestBody String apirequest) {
-
 		try {
 			JSONObject jsonobj = new JSONObject(apirequest);
 			JSONObject temp = jsonobj.getJSONObject("result").getJSONObject("fulfillment");
