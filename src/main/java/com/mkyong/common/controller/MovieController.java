@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/movie")
 public class MovieController {
 
-	@RequestMapping(value = "/{name}", method = RequestMethod.POST)
+		@RequestMapping(value = "/{name}", method = RequestMethod.POST)
 	public Map<String, Object> getMovie(@RequestBody String apirequest) {
 
 		try {
